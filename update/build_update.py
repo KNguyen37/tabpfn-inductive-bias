@@ -174,6 +174,11 @@ def build():
 
         P("GitHub Repository", head),
         P(f'<link href="{REPO}" color="#1d5ea9">{REPO}</link> (public; the README lists how to reproduce current results)', body),
+
+        P("AI Usage Disclosure", head),
+        P("The project\u2019s direction and research ideas originated with us. We used Claude (Claude Code) to help with coding, "
+          "experiment orchestration, writing and organization. It also suggested some technical options, such as the jump share "
+          "metric, which we reviewed before adopting. We are responsible for all content and results.", body),
     ]
 
     OUT.parent.mkdir(exist_ok=True)
