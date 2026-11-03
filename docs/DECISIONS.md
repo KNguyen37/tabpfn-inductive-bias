@@ -45,7 +45,12 @@ The claim: the interface shows what static figures cannot, namely (a) a boundary
 A static page cannot run TabPFN, so the proposal's "add context points" becomes a slider over precomputed nested contexts (10 ⊂ 30 ⊂ 60 ⊂ 200).
 
 ### 6. Model access
-`tabpfn` 9.2.0 provides both `ModelVersion.V2` and 3.5. Result of the Colab test: **pending, see `results/smoke/`.** Fallback if 3.5 is too slow: `tabpfn_v35_fast`.
+**Go for H5, H6 and RQ3.** On Nov 3, `tabpfn` 9.2.0 ran `ModelVersion.V2` and 3.5 on a Colab A100 (40 GB) without errors, predicting a 200×200 grid on spirals at n=60 and n=200 (`results/smoke/tabpfn_smoke.json`). A full job took about 3.2 s for v2 and 4.8 s for 3.5.
+
+- **Compute estimate:** about 4 GPU hours for the planned 3,640 jobs. This is rough: it comes from one synthetic problem, excludes Drive write time and ablation, and real-data jobs will differ in size and feature count. Fallback if 3.5 proves too slow: `tabpfn_v35_fast`.
+- **Default ensemble size is not fixed:** `n_estimators="auto"` comes from the checkpoint and can rise with feature count. Record the resolved count per run before the sweep, and settle whether defaults are comparable across versions and in the noise-column test (Issue #8).
+- **License:** the 3.5 license permits non-commercial use, including academic research, and says outputs may be used only for non-commercial purposes. It does not explicitly address publishing outputs. It prohibits offering the model as a hosted service, so the interface shows precomputed grids only. It also bars using outputs to train a competing model. This is our reading, not legal advice. Label published 3.5 grids as non-commercial.
+- **Disclosure for the freeze:** the smoke report exposed jump share and axis alignment for one TabPFN surface per version and size, on one dataset and seed. Those values must not be used to choose τ or margins, and are not evidence about any hypothesis.
 
 ## Other decisions
 - **Compute:** TabPFN runs on Kiet's Colab GPU, recording the GPU type. Classic models and analysis run locally.
