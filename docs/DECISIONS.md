@@ -33,6 +33,44 @@ Each dataset's role is assigned from classic-model Δ alone, before TabPFN sees 
 The main figure plots Δ against TabPFN's tree-vs-smooth resemblance, with one point per dataset.
 Fallback: the 2-dataset case study. "Rule-like" becomes "tree-favoring", which is what Δ actually measures.
 
+**Screen result and proposed datasets (Nov 3, Nhan; proposed, awaiting Kiet's confirmation; Issue #5).**
+Classic models only; TabPFN has not seen any of these datasets. `CANDIDATES` in `src/tabbias/realdata.py` lists 35
+OpenML datasets; 33 were screened at n=100 and n=500 over 10 seeds (4,200 fits, 0 failures), and ionosphere and sonar
+were too small for either size. 8 more were checked and excluded with a reason. Every candidate, including skipped and
+excluded ones, is in `results/metrics/real_screen.csv`; per-fit results are in `results/metrics/real_screen_runs.csv`.
+Δ is mean accuracy of RF and GBDT minus that of SVM, MLP and GP, with a 95% t-interval over seeds. Dataset names below
+are the keys used in the CSV and code.
+
+| Side | Dataset (OpenML ID) | Rows | Features | Δ acc, n=100 [95% CI] | Δ acc, n=500 [95% CI] |
+|---|---|---|---|---|---|
+| Tree | covertype (44121) | 566,602 | 10 | +0.048 [+0.032, +0.063] | +0.021 [+0.008, +0.034] |
+| Tree | run_or_walk (40922) | 88,588 | 6 | +0.101 [+0.087, +0.115] | +0.036 [+0.030, +0.043] |
+| Tree | kdd_ipums_la_97_small (44124) | 5,188 | 20 | +0.052 [+0.032, +0.072] | +0.040 [+0.028, +0.052] |
+| Smooth | california (44090) | 20,634 | 8 | −0.019 [−0.034, −0.005] | +0.004 [−0.007, +0.014] |
+| Smooth | eeg_eye_state (1471), provisional | 14,980 | 14 | −0.019 [−0.037, −0.001] | −0.031 [−0.069, +0.007] |
+| Smooth | kc1 (1067) | 2,109 | 21 | −0.015 [−0.023, −0.006] | −0.009 [−0.017, −0.000] |
+
+Selection rules, set before the screen results were read: real measured data (simulated sets such as Higgs, MiniBooNE
+and MagicTelescope are excluded); Δ's CI excludes 0 with the same sign at both n=100 and n=500; best accuracy below 0.98
+at n=100; at least 1,300 rows; at most 50 features; distinct domains; then the largest |Δ| per side, preferring more rows.
+
+- **Rule change after seeing the classic screen (disclose in the paper).** Only kc1 meets the both-sizes rule on the
+  smooth side, and only barely (n=500 upper bound −0.00004). After reading the classic results, the smooth-side rule was
+  relaxed to "Δ's CI excludes 0 at n=100", which admits california and eeg_eye_state. This happened before TabPFN saw
+  any real data, so CLAUDE.md rule 5 does not apply, but it is a role rule chosen after seeing classic results.
+  Real smooth-favoring data being rare is itself worth reporting.
+- **eeg_eye_state is provisional.** Its rows are one continuous recording in time order, so random splits put
+  near-identical neighbouring samples in train and test, which favors local models. Its Δ above comes from such random
+  splits. Before TabPFN sees it, re-screen it on classic models with contiguous time-block splits and keep it only if
+  it still favors smooth models; otherwise use banknote or drop to two smooth datasets.
+- **Banknote is saturated** (best accuracy 0.996 at n=100), as the proposal anticipated, so it is not a primary pick.
+- **Alternative tree pick:** electricity (44120) has published reference plots but its n=100 CI includes 0
+  (+0.013 [−0.003, +0.030]); it could replace kdd_ipums_la_97_small.
+- **Not picked:** mozilla4 (largest Δ, but its features include a class `id` and start/end times, which may let trees
+  exploit identifiers; unchecked); jannis (contents concealed, 54 features).
+- **Accuracy and log loss disagree:** in 25 of 60 screened settings Δ in accuracy favors trees while Δ in log loss
+  favors smooth models, so log loss is not a simple second check for roles.
+
 ### 4. Classmate study: removed
 No timing, accuracy or before/after measures. Replaced by 3–5 structured walkthroughs with people experienced in ML, reported
 qualitatively, plus authors' worked examples.

@@ -24,6 +24,7 @@ python3.11 -m venv .venv
 | `results/metrics/classic_pilot_rerun.csv` | `.venv/bin/python scripts/run_sweep.py --family classic --datasets moons,circles,xor,spirals_medium --variants clean --ns 60 --seeds 0,1,2 --csv results/metrics/classic_pilot_rerun.csv` | Laptop |
 | `results/metric_sanity/jump_share_threshold_sensitivity.csv` | `.venv/bin/python scripts/threshold_sensitivity.py` (after the row above) | Laptop |
 | `results/metrics/classic_synth.csv` | `.venv/bin/python scripts/run_sweep.py --family classic` | Laptop |
+| `results/metrics/real_screen.csv`, `real_screen_runs.csv` | `.venv/bin/python scripts/screen_datasets.py` (downloads from OpenML into `data/`) | Laptop |
 | TabPFN access and timing | `notebooks/colab_smoke_test.ipynb` | Colab GPU |
 | `results/metrics/tabpfn_synth.csv` | `notebooks/colab_sweep.ipynb` | Colab GPU |
 
