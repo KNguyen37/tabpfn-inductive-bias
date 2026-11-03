@@ -7,3 +7,5 @@ pyarrow==26.0.1
 scikit-learn==1.9.1
 matplotlib==3.11.2
 pytest==9.2.0
+pypdf==6.21.4
+reportlab==5.1.0
