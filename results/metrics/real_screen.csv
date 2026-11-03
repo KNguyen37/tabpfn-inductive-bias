@@ -1,0 +1,79 @@
+dataset,n,status,seeds,delta_accuracy,delta_accuracy_ci_low,delta_accuracy_ci_high,delta_log_loss,delta_log_loss_ci_low,delta_log_loss_ci_high,best_model_accuracy,accuracy_gbdt,accuracy_gp,accuracy_knn,accuracy_logreg,accuracy_mlp,accuracy_rf,accuracy_svm,saturated_at_n100,openml_id,rows,numeric_features,domain,source,origin
+Bioresponse,,"excluded: 1,776 features; too costly for SVM, MLP and GP at this scale",,,,,,,,,,,,,,,,,4134,,,,,
+Higgs,100,screened,10.0,0.057444,0.044843,0.070046,-0.140259,-0.194141,-0.086376,0.591667,0.587667,0.526667,0.53,0.558667,0.549667,0.591667,0.520333,False,44129,940160.0,24.0,particle physics,Grinsztajn benchmark,simulated
+Higgs,500,screened,10.0,0.066222,0.05053,0.081914,0.091666,0.039279,0.144054,0.642,0.638,0.556333,0.539,0.593333,0.584667,0.642,0.580333,False,44129,940160.0,24.0,particle physics,Grinsztajn benchmark,simulated
+MagicTelescope,100,screened,10.0,-0.009611,-0.023798,0.004575,-0.181788,-0.264141,-0.099436,0.762667,0.733667,0.762667,0.695333,0.739333,0.746667,0.756,0.754,False,44125,13376.0,10.0,astrophysics,Grinsztajn benchmark,simulated
+MagicTelescope,500,screened,10.0,-0.008667,-0.0239,0.006566,-0.046339,-0.081793,-0.010884,0.821,0.795333,0.821,0.749667,0.760667,0.786333,0.802667,0.815667,False,44125,13376.0,10.0,astrophysics,Grinsztajn benchmark,simulated
+MiniBooNE,100,screened,10.0,0.020778,-0.021931,0.063487,-0.190421,-0.308191,-0.07265,0.87,0.832667,0.784333,0.844,0.836667,0.859333,0.87,0.848,False,44128,72998.0,50.0,particle physics,Grinsztajn benchmark,simulated
+MiniBooNE,500,screened,10.0,0.019778,0.006605,0.032951,-0.01082,-0.043505,0.021865,0.897667,0.897667,0.881333,0.854667,0.854667,0.887667,0.897,0.863667,False,44128,72998.0,50.0,particle physics,Grinsztajn benchmark,simulated
+PhishingWebsites,,excluded: all 30 features are categorical; the screen needs numeric features,,,,,,,,,,,,,,,,,4534,,,,,
+banana,,excluded: artificially generated 2D data; the real-data screen uses real data only,,,,,,,,,,,,,,,,,1460,,,,,
+bank_marketing,,"excluded: finance; left out to keep the domains varied (team choice, Nov 3)",,,,,,,,,,,,,,,,,44126,,,,,
+banknote,100,screened,10.0,-0.052167,-0.064342,-0.039991,-0.215771,-0.284526,-0.147017,0.995667,0.936667,0.995667,0.963667,0.966667,0.992,0.946333,0.993333,True,1462,1372.0,4.0,image forensics,proposal,measured
+banknote,500,screened,10.0,-0.0175,-0.021071,-0.013929,-0.034369,-0.061798,-0.006941,1.0,0.978,0.999667,0.993333,0.983,0.999333,0.986333,1.0,True,1462,1372.0,4.0,image forensics,proposal,measured
+blood_transfusion,100,screened,10.0,-0.027556,-0.043675,-0.011436,-0.467365,-0.559066,-0.375664,0.782667,0.725333,0.782667,0.753667,0.781333,0.727333,0.740667,0.771667,False,1464,748.0,4.0,medical,OpenML numeric,measured
+blood_transfusion,500,skipped: 748 rows < n + 300,,,,,,,,,,,,,,,,,1464,748.0,4.0,medical,OpenML numeric,measured
+california,100,screened,10.0,-0.019278,-0.033976,-0.00458,-0.300497,-0.394704,-0.206289,0.815,0.762333,0.815,0.743333,0.811667,0.790333,0.785333,0.774,False,44090,20634.0,8.0,housing,Grinsztajn benchmark,measured
+california,500,screened,10.0,0.003778,-0.006914,0.014469,-0.044968,-0.10598,0.016045,0.847667,0.843667,0.847667,0.796667,0.83,0.831333,0.843667,0.840667,False,44090,20634.0,8.0,housing,Grinsztajn benchmark,measured
+churn,100,screened,10.0,-0.006556,-0.016272,0.003161,-0.21056,-0.253081,-0.16804,0.864667,0.829333,0.863333,0.860333,0.845,0.833,0.864667,0.864333,False,40701,5000.0,16.0,telecom customers,OpenML numeric,measured
+churn,500,screened,10.0,0.018111,0.010935,0.025287,-0.105154,-0.151527,-0.05878,0.885333,0.880667,0.86,0.873,0.87,0.851333,0.885333,0.883333,False,40701,5000.0,16.0,telecom customers,OpenML numeric,measured
+climate_crashes,100,screened,10.0,-0.006,-0.016293,0.004293,-0.178863,-0.229395,-0.128331,0.916333,0.890333,0.913667,0.915667,0.893333,0.903,0.916333,0.911333,False,1467,540.0,20.0,climate model,OpenML numeric,simulated
+climate_crashes,500,skipped: 540 rows < n + 300,,,,,,,,,,,,,,,,,1467,540.0,20.0,climate model,OpenML numeric,simulated
+covertype,100,screened,10.0,0.047556,0.032247,0.062864,-0.183419,-0.266373,-0.100465,0.680667,0.666,0.615333,0.593333,0.582333,0.622333,0.680667,0.639667,False,44121,566602.0,10.0,forestry,Grinsztajn benchmark,measured
+covertype,500,screened,10.0,0.020944,0.008062,0.033826,0.029054,-0.035222,0.093329,0.743,0.736,0.734333,0.688,0.604333,0.691333,0.743,0.73,False,44121,566602.0,10.0,forestry,Grinsztajn benchmark,measured
+credit,,"excluded: finance; left out to keep the domains varied (team choice, Nov 3)",,,,,,,,,,,,,,,,,44089,,,,,
+delta_ailerons,100,screened,10.0,0.000333,-0.005709,0.006376,-0.085516,-0.117689,-0.053343,0.935667,0.920667,0.935667,0.925333,0.935667,0.914667,0.934667,0.931667,False,803,7129.0,5.0,aircraft control,OpenML numeric,simulated
+delta_ailerons,500,screened,10.0,0.005389,-0.00218,0.012957,-0.053905,-0.087103,-0.020706,0.948,0.940333,0.945667,0.943,0.944667,0.925667,0.948,0.945,False,803,7129.0,5.0,aircraft control,OpenML numeric,simulated
+diabetes,100,screened,10.0,0.013111,-0.003483,0.029705,-0.151427,-0.228033,-0.074821,0.753,0.726,0.736,0.703333,0.753,0.707333,0.739333,0.715333,False,37,768.0,8.0,medical,OpenML numeric,measured
+diabetes,500,skipped: 768 rows < n + 300,,,,,,,,,,,,,,,,,37,768.0,8.0,medical,OpenML numeric,measured
+eeg_eye_state,100,screened,10.0,-0.019167,-0.037278,-0.001056,-0.298085,-0.369828,-0.226343,0.687667,0.637333,0.668667,0.632,0.599667,0.687667,0.655667,0.640667,False,1471,14980.0,14.0,brain signals,OpenML numeric,measured
+eeg_eye_state,500,screened,10.0,-0.030944,-0.069293,0.007404,-0.144488,-0.21628,-0.072696,0.817,0.759333,0.807,0.749667,0.615,0.817,0.763,0.752333,False,1471,14980.0,14.0,brain signals,OpenML numeric,measured
+electricity,100,screened,10.0,0.013389,-0.003496,0.030273,-0.179064,-0.25127,-0.106857,0.740667,0.719667,0.722667,0.696667,0.723,0.703333,0.740667,0.724333,False,44120,38474.0,7.0,energy prices,proposal; Grinsztajn benchmark,measured
+electricity,500,screened,10.0,0.043444,0.034833,0.052056,0.002047,-0.070432,0.074526,0.769,0.769,0.735,0.703667,0.729,0.705667,0.767667,0.734,False,44120,38474.0,7.0,energy prices,proposal; Grinsztajn benchmark,measured
+elevators,100,screened,10.0,-0.005944,-0.033568,0.021679,-0.318184,-0.406431,-0.229937,0.837333,0.761,0.750333,0.767667,0.837333,0.802,0.783333,0.782,False,846,16599.0,18.0,aircraft control,OpenML numeric,simulated
+elevators,500,screened,10.0,-0.049778,-0.072316,-0.02724,-0.247825,-0.327235,-0.168416,0.883,0.801333,0.850667,0.771,0.883,0.855667,0.802667,0.849,False,846,16599.0,18.0,aircraft control,OpenML numeric,simulated
+eye_movements,100,screened,10.0,0.014056,-0.001933,0.030044,-0.16753,-0.239674,-0.095386,0.531333,0.523333,0.498667,0.513,0.531333,0.509,0.512333,0.503667,False,44130,7608.0,20.0,psychology,Grinsztajn benchmark,measured
+eye_movements,500,screened,10.0,0.0145,-0.007017,0.036017,0.206607,0.142044,0.271169,0.553667,0.548667,0.526667,0.516667,0.546333,0.539667,0.553667,0.543667,False,44130,7608.0,20.0,psychology,Grinsztajn benchmark,measured
+hill_valley,,excluded: artificially generated; the real-data screen uses real data only,,,,,,,,,,,,,,,,,1479,,,,,
+house_16H,100,screened,10.0,0.016389,-0.003424,0.036202,-0.043343,-0.100468,0.013782,0.819,0.809333,0.802,0.760333,0.788333,0.797,0.819,0.794333,False,44123,13488.0,16.0,census,Grinsztajn benchmark,measured
+house_16H,500,screened,10.0,0.026833,0.014132,0.039534,0.040601,-0.016783,0.097985,0.867667,0.867667,0.844667,0.797,0.814333,0.841,0.866,0.834333,False,44123,13488.0,16.0,census,Grinsztajn benchmark,measured
+ilpd,100,screened,10.0,-0.018667,-0.033129,-0.004204,-0.250371,-0.321694,-0.179047,0.712667,0.668,0.712667,0.655333,0.707667,0.674,0.688667,0.704333,False,1480,583.0,9.0,medical,OpenML numeric,measured
+ilpd,500,skipped: 583 rows < n + 300,,,,,,,,,,,,,,,,,1480,583.0,9.0,medical,OpenML numeric,measured
+ionosphere,100,skipped: 351 rows < n + 300,,,,,,,,,,,,,,,,,59,351.0,34.0,radar,OpenML numeric,measured
+ionosphere,500,skipped: 351 rows < n + 300,,,,,,,,,,,,,,,,,59,351.0,34.0,radar,OpenML numeric,measured
+jannis,100,screened,10.0,0.065667,0.051857,0.079477,-0.209522,-0.260371,-0.158674,0.683,0.647667,0.5,0.644667,0.627333,0.642333,0.683,0.656667,False,44131,57580.0,54.0,anonymized,Grinsztajn benchmark,measured
+jannis,500,screened,10.0,0.101111,0.083635,0.118588,0.047556,0.005568,0.089545,0.748,0.737333,0.524667,0.676333,0.709333,0.688333,0.748,0.711667,False,44131,57580.0,54.0,anonymized,Grinsztajn benchmark,measured
+jm1,,excluded: 25 missing values,,,,,,,,,,,,,,,,,1053,,,,,
+kc1,100,screened,10.0,-0.014667,-0.022853,-0.006481,-0.207049,-0.313971,-0.100127,0.850333,0.809667,0.839333,0.841333,0.850333,0.815667,0.825667,0.842,False,1067,2109.0,21.0,software defects,OpenML numeric,measured
+kc1,500,screened,10.0,-0.008722,-0.017405,-3.9e-05,-0.16277,-0.217067,-0.108473,0.861,0.828667,0.856333,0.843333,0.861,0.830333,0.848333,0.855,False,1067,2109.0,21.0,software defects,OpenML numeric,measured
+kc2,100,screened,10.0,0.001944,-0.010815,0.014704,-0.227164,-0.313405,-0.140922,0.832333,0.809333,0.825333,0.826667,0.832333,0.807,0.828333,0.818333,False,1063,522.0,21.0,software defects,OpenML numeric,measured
+kc2,500,skipped: 522 rows < n + 300,,,,,,,,,,,,,,,,,1063,522.0,21.0,software defects,OpenML numeric,measured
+kdd_ipums_la_97_small,100,screened,10.0,0.052278,0.032227,0.072329,0.041377,-0.039693,0.122448,0.868,0.834333,0.803,0.780667,0.807,0.784333,0.868,0.809333,False,44124,5188.0,20.0,census,Grinsztajn benchmark,measured
+kdd_ipums_la_97_small,500,screened,10.0,0.039611,0.027531,0.051692,0.074321,0.010167,0.138476,0.875667,0.866667,0.842333,0.819,0.840667,0.809333,0.875667,0.843,False,44124,5188.0,20.0,census,Grinsztajn benchmark,measured
+madelon,,excluded: artificially generated; the real-data screen uses real data only,,,,,,,,,,,,,,,,,1485,,,,,
+mozilla4,100,screened,10.0,0.100667,0.088617,0.112716,0.186629,0.106006,0.267252,0.915667,0.913667,0.825667,0.773,0.803667,0.812333,0.915667,0.804,False,1046,15545.0,5.0,software,OpenML numeric,measured
+mozilla4,500,screened,10.0,0.065056,0.059615,0.070496,-0.034981,-0.070625,0.000663,0.930667,0.921,0.858667,0.814333,0.825667,0.872,0.930667,0.851667,False,1046,15545.0,5.0,software,OpenML numeric,measured
+nomao,100,screened,10.0,0.004056,-0.010159,0.01827,-0.11969,-0.244764,0.005384,0.894667,0.886,0.894667,0.871,0.884667,0.891,0.893667,0.871667,False,1486,34465.0,89.0,web place data,OpenML numeric,measured
+nomao,500,screened,10.0,0.077944,0.058464,0.097425,0.133654,0.091576,0.175732,0.935333,0.935333,0.735333,0.891333,0.916,0.920667,0.934333,0.914667,False,1486,34465.0,89.0,web place data,OpenML numeric,measured
+ozone_level,100,screened,10.0,-0.0095,-0.020089,0.001089,-0.165682,-0.195959,-0.135404,0.938667,0.913,0.938667,0.937,0.929667,0.930667,0.938,0.935667,False,1487,2534.0,72.0,weather,OpenML numeric,measured
+ozone_level,500,screened,10.0,0.000444,-0.004328,0.005216,-0.074962,-0.095653,-0.05427,0.943333,0.941333,0.941667,0.939667,0.935667,0.943,0.943333,0.941,False,1487,2534.0,72.0,weather,OpenML numeric,measured
+pc1,100,screened,10.0,-0.004944,-0.017274,0.007385,-0.099314,-0.184077,-0.01455,0.930333,0.905333,0.93,0.926,0.915667,0.898,0.923667,0.930333,False,1068,1109.0,21.0,software defects,OpenML numeric,measured
+pc1,500,screened,10.0,0.005611,-0.001541,0.012763,-0.014045,-0.049587,0.021497,0.934667,0.931,0.931,0.929667,0.928667,0.919333,0.934667,0.931333,False,1068,1109.0,21.0,software defects,OpenML numeric,measured
+pc3,100,screened,10.0,-0.009,-0.012938,-0.005062,-0.200313,-0.250647,-0.14998,0.896667,0.865667,0.896667,0.889,0.874,0.87,0.889667,0.893333,False,1050,1563.0,37.0,software defects,OpenML numeric,measured
+pc3,500,screened,10.0,0.001556,-0.0033,0.006411,-0.087884,-0.120689,-0.055079,0.899,0.884333,0.891333,0.894,0.891667,0.885667,0.899,0.893333,False,1050,1563.0,37.0,software defects,OpenML numeric,measured
+phoneme,100,screened,10.0,0.0045,-0.011615,0.020615,-0.135867,-0.216353,-0.055381,0.779333,0.771667,0.774333,0.770667,0.753667,0.772667,0.779333,0.766,False,1489,5404.0,5.0,speech,OpenML numeric,measured
+phoneme,500,screened,10.0,0.011667,0.005547,0.017786,-0.122098,-0.161852,-0.082344,0.85,0.837333,0.84,0.813667,0.756,0.838667,0.85,0.817333,False,1489,5404.0,5.0,speech,OpenML numeric,measured
+pol,100,screened,10.0,0.024444,0.012189,0.036699,-0.031355,-0.104235,0.041526,0.902333,0.898333,0.871333,0.743333,0.815333,0.876,0.902333,0.880333,False,44122,10082.0,26.0,telecom,Grinsztajn benchmark,measured
+pol,500,screened,10.0,0.013556,0.008239,0.018872,0.012436,-0.011466,0.036337,0.965,0.965,0.951,0.894,0.853333,0.947,0.960333,0.949333,False,44122,10082.0,26.0,telecom,Grinsztajn benchmark,measured
+qsar_biodeg,100,screened,10.0,-0.025778,-0.035985,-0.015571,-0.234335,-0.295212,-0.173457,0.834,0.796333,0.831333,0.791667,0.834,0.830667,0.809667,0.824333,False,1494,1055.0,41.0,chemistry,OpenML numeric,measured
+qsar_biodeg,500,screened,10.0,0.066833,0.05997,0.073697,0.057568,0.010154,0.104981,0.865667,0.857333,0.663333,0.834667,0.859667,0.855333,0.865667,0.865333,False,1494,1055.0,41.0,chemistry,OpenML numeric,measured
+run_or_walk,100,screened,10.0,0.101,0.087057,0.114943,0.197036,0.134275,0.259798,0.949333,0.930667,0.850333,0.788333,0.723667,0.870667,0.949333,0.796,False,40922,88588.0,6.0,phone accelerometer,OpenML numeric,measured
+run_or_walk,500,screened,10.0,0.0365,0.029763,0.043237,0.068942,0.030336,0.107547,0.974333,0.963333,0.945667,0.873667,0.737667,0.952333,0.974333,0.899,False,40922,88588.0,6.0,phone accelerometer,OpenML numeric,measured
+sonar,100,skipped: 208 rows < n + 300,,,,,,,,,,,,,,,,,40,208.0,60.0,sonar,OpenML numeric,measured
+sonar,500,skipped: 208 rows < n + 300,,,,,,,,,,,,,,,,,40,208.0,60.0,sonar,OpenML numeric,measured
+spambase,100,screened,10.0,0.032167,0.014164,0.050169,-0.01469,-0.093218,0.063838,0.905,0.882,0.861,0.81,0.86,0.863667,0.905,0.859333,False,44,4601.0,57.0,email text,OpenML numeric,measured
+spambase,500,screened,10.0,0.013944,0.005907,0.021982,0.033053,0.002805,0.063301,0.925667,0.916667,0.907667,0.861667,0.906,0.910667,0.925667,0.903333,False,44,4601.0,57.0,email text,OpenML numeric,measured
+wdbc,100,screened,10.0,0.026056,-0.014058,0.066169,-0.147888,-0.211662,-0.084115,0.960333,0.914,0.793667,0.939333,0.960333,0.956,0.937,0.948667,False,1510,569.0,30.0,medical,OpenML numeric,measured
+wdbc,500,skipped: 569 rows < n + 300,,,,,,,,,,,,,,,,,1510,569.0,30.0,medical,OpenML numeric,measured
+wilt,100,screened,10.0,-0.001389,-0.004335,0.001557,-0.067159,-0.099196,-0.035123,0.963667,0.962667,0.946667,0.946,0.945,0.963667,0.948333,0.960333,False,40983,4839.0,5.0,remote sensing,OpenML numeric,measured
+wilt,500,screened,10.0,0.000722,-0.00353,0.004974,-0.021543,-0.052494,0.009409,0.983667,0.975333,0.946667,0.952,0.947,0.983667,0.967667,0.982,False,40983,4839.0,5.0,remote sensing,OpenML numeric,measured
