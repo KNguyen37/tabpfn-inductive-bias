@@ -27,8 +27,23 @@ def predict_batched(model, X: np.ndarray, batch_size: int) -> np.ndarray:
     return np.concatenate(parts) if parts else np.empty(0)
 
 
+def describe_model(model) -> dict:
+    """Settings resolved during fit. TabPFN's default ensemble size depends on the checkpoint and features."""
+    info = {}
+    if hasattr(model, "n_estimators_"):
+        info["n_estimators"] = int(model.n_estimators_)
+    if hasattr(model, "model_path"):
+        info["model_path"] = str(model.model_path)
+    return info
+
+
+def is_done(key: RunKey, out: Path) -> bool:
+    """Both files are required, because Google Drive can lose unflushed writes after a disconnect."""
+    return key.run_path(out).exists() and key.grid_path(out).exists()
+
+
 def run_one(key: RunKey, problem: Problem, factory: Callable, batch_size: int) -> tuple[dict, np.ndarray]:
-    """Fit one model and return its metrics and prediction grid."""
+    """Fit one model and return its metrics (plus `model_info`) and prediction grid."""
     X, y = problem.context(key.n)
     model = factory(key.model, key.seed)
 
@@ -57,6 +72,7 @@ def run_one(key: RunKey, problem: Problem, factory: Callable, batch_size: int) -
         "transition_width": M.transition_width(grid, problem.half_width),
         "fit_seconds": fit_seconds,
         "predict_seconds": predict_seconds,
+        "model_info": describe_model(model),
     }
     return values, grid
 
@@ -83,7 +99,7 @@ def run_sweep(
     """Run every unfinished key. Failures are logged and skipped, so one cannot stop the sweep."""
     out = Path(out)
     keys = list(keys)
-    pending = [k for k in keys if not k.run_path(out).exists()]
+    pending = [k for k in keys if not is_done(k, out)]
     tally = {"total": len(keys), "skipped": len(keys) - len(pending), "done": 0, "failed": 0}
     started = time.perf_counter()
     cache_key, problem = None, None
@@ -98,9 +114,10 @@ def run_sweep(
                 problem = make_problem(key.dataset, key.variant, key.seed)
                 cache_key = problem_key
             values, grid = run_one(key, problem, factory, batch_size)
+            model_info = values.pop("model_info")
             save_grid(key.grid_path(out), grid, problem.half_width)
             save_run(key.run_path(out), key, {**values, "device": device},
-                     extra={"python": platform.python_version()})
+                     extra={"python": platform.python_version(), **model_info})
             tally["done"] += 1
         except Exception:
             tally["failed"] += 1
