@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(.venv/bin/python -m pytest:*)",
+      "Bash(.venv/bin/python scripts/:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(gh api user:*)",
+      "Bash(gh issue list:*)",
+      "Bash(gh issue view:*)",
+      "Bash(gh pr view:*)",
+      "Bash(gh pr list:*)"
+    ],
+    "deny": [
+      "Bash(git push --force:*)",
+      "Bash(git push -f:*)",
+      "Bash(gh pr merge:*)",
+      "Read(.env)"
+    ]
+  }
+}

@@ -1,0 +1,85 @@
+seed,data,model,A
+0,Moons,Logistic regression,0.7335622857193733
+0,Moons,k-nearest neighbors,0.9460813759211755
+0,Moons,Random forest,0.9442487015429043
+0,Moons,Gradient boosting,0.9851620613413257
+0,Moons,SVM,0.7766011542014382
+0,Moons,Neural net (MLP),0.7999314465707563
+0,Moons,Gaussian process,0.7768644425108412
+0,Circles,Logistic regression,0.7462179112845236
+0,Circles,k-nearest neighbors,0.9140305284117388
+0,Circles,Random forest,0.9367093198550236
+0,Circles,Gradient boosting,0.9982109056863554
+0,Circles,SVM,0.7915608582285999
+0,Circles,Neural net (MLP),0.8092901650267353
+0,Circles,Gaussian process,0.7800512408196314
+0,XOR (checkerboard),Logistic regression,0.8436547637478072
+0,XOR (checkerboard),k-nearest neighbors,0.9443731890621849
+0,XOR (checkerboard),Random forest,0.9250242599276555
+0,XOR (checkerboard),Gradient boosting,0.9843389791544153
+0,XOR (checkerboard),SVM,0.7747607691550288
+0,XOR (checkerboard),Neural net (MLP),0.7804569484200365
+0,XOR (checkerboard),Gaussian process,0.7789919801128317
+0,Spirals,Logistic regression,0.8872845340206229
+0,Spirals,k-nearest neighbors,0.9265509824355982
+0,Spirals,Random forest,0.9108359734772724
+0,Spirals,Gradient boosting,0.9847008334266861
+0,Spirals,SVM,0.7654502688524356
+0,Spirals,Neural net (MLP),0.7755106327445335
+0,Spirals,Gaussian process,0.7788678812710598
+1,Moons,Logistic regression,0.8381949082641058
+1,Moons,k-nearest neighbors,0.951321005220193
+1,Moons,Random forest,0.9454125473881326
+1,Moons,Gradient boosting,0.995914390188304
+1,Moons,SVM,0.7609099228665928
+1,Moons,Neural net (MLP),0.7397129737045091
+1,Moons,Gaussian process,0.769542644162815
+1,Circles,Logistic regression,0.7179658298589164
+1,Circles,k-nearest neighbors,0.8986012172619611
+1,Circles,Random forest,0.9403898400770312
+1,Circles,Gradient boosting,0.998242939617391
+1,Circles,SVM,0.78879546960139
+1,Circles,Neural net (MLP),0.7950738310491651
+1,Circles,Gaussian process,0.7800456224261293
+1,XOR (checkerboard),Logistic regression,0.8308974748166196
+1,XOR (checkerboard),k-nearest neighbors,0.9427395970804399
+1,XOR (checkerboard),Random forest,0.9297908570861587
+1,XOR (checkerboard),Gradient boosting,0.9931759770955753
+1,XOR (checkerboard),SVM,0.7867148979008434
+1,XOR (checkerboard),Neural net (MLP),0.7808266281881859
+1,XOR (checkerboard),Gaussian process,0.7808728013817269
+1,Spirals,Logistic regression,0.837672017001101
+1,Spirals,k-nearest neighbors,0.9384022093846264
+1,Spirals,Random forest,0.9227731633656633
+1,Spirals,Gradient boosting,0.9978170269875511
+1,Spirals,SVM,0.7634348513623965
+1,Spirals,Neural net (MLP),0.7751792441682569
+1,Spirals,Gaussian process,0.7739675567143068
+2,Moons,Logistic regression,0.712234424757998
+2,Moons,k-nearest neighbors,0.9519672287380744
+2,Moons,Random forest,0.9386146077110076
+2,Moons,Gradient boosting,0.9966325604795063
+2,Moons,SVM,0.7865370239344005
+2,Moons,Neural net (MLP),0.7805431601515173
+2,Moons,Gaussian process,0.7926211488503797
+2,Circles,Logistic regression,0.8194065818067348
+2,Circles,k-nearest neighbors,0.903250522910896
+2,Circles,Random forest,0.9379200461981129
+2,Circles,Gradient boosting,0.9905904436177305
+2,Circles,SVM,0.7819072508040588
+2,Circles,Neural net (MLP),0.7754756581471485
+2,Circles,Gaussian process,0.7861818058001324
+2,XOR (checkerboard),Logistic regression,0.7072419698402744
+2,XOR (checkerboard),k-nearest neighbors,0.8939221584400215
+2,XOR (checkerboard),Random forest,0.9307688113634098
+2,XOR (checkerboard),Gradient boosting,0.9962487424403504
+2,XOR (checkerboard),SVM,0.806051947736058
+2,XOR (checkerboard),Neural net (MLP),0.8062260742503995
+2,XOR (checkerboard),Gaussian process,0.8148411779379119
+2,Spirals,Logistic regression,0.9911051025973818
+2,Spirals,k-nearest neighbors,0.9341369430699892
+2,Spirals,Random forest,0.9257328374615125
+2,Spirals,Gradient boosting,0.9888966176032589
+2,Spirals,SVM,0.7633214421809321
+2,Spirals,Neural net (MLP),0.7851438011027347
+2,Spirals,Gaussian process,0.7903950384686814

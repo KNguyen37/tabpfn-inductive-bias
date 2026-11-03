@@ -1,0 +1,13 @@
+surface,true_shape,axis_alignment_formerly_S,jump_share,transition_width
+"smooth ramp, 0 deg",smooth,1.0,0.0,4.398
+"smooth ramp, 22.5 deg",smooth,0.765,0.0,4.333
+"smooth ramp, 45 deg",smooth,0.707,0.0,4.165
+"smooth ramp, 67.5 deg",smooth,0.765,0.0,4.333
+"sharp edge, 0 deg",sharp,1.0,0.979,0.074
+"sharp edge, 22.5 deg",sharp,0.769,0.943,0.079
+"sharp edge, 45 deg",sharp,0.707,0.958,0.072
+"sharp edge, 67.5 deg",sharp,0.769,0.943,0.079
+smooth circle,smooth,0.778,0.0,4.095
+sharp circle,sharp,0.797,0.944,0.079
+"tree-like plateaus, 0 deg",sharp,1.0,1.0,2.274
+"tree-like plateaus, 45 deg",sharp,0.722,1.0,2.25

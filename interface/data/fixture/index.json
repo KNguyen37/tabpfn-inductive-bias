@@ -1,0 +1,226 @@
+[
+{
+"dataset": "spirals_medium",
+"variant": "clean",
+"n": 10,
+"seed": 0,
+"model": "gbdt",
+"path": "spirals_medium/clean/n10/seed0/gbdt.json"
+},
+{
+"dataset": "spirals_medium",
+"variant": "clean",
+"n": 10,
+"seed": 0,
+"model": "gp",
+"path": "spirals_medium/clean/n10/seed0/gp.json"
+},
+{
+"dataset": "spirals_medium",
+"variant": "clean",
+"n": 10,
+"seed": 0,
+"model": "knn",
+"path": "spirals_medium/clean/n10/seed0/knn.json"
+},
+{
+"dataset": "spirals_medium",
+"variant": "clean",
+"n": 10,
+"seed": 0,
+"model": "logreg",
+"path": "spirals_medium/clean/n10/seed0/logreg.json"
+},
+{
+"dataset": "spirals_medium",
+"variant": "clean",
+"n": 10,
+"seed": 0,
+"model": "mlp",
+"path": "spirals_medium/clean/n10/seed0/mlp.json"
+},
+{
+"dataset": "spirals_medium",
+"variant": "clean",
+"n": 10,
+"seed": 0,
+"model": "rf",
+"path": "spirals_medium/clean/n10/seed0/rf.json"
+},
+{
+"dataset": "spirals_medium",
+"variant": "clean",
+"n": 10,
+"seed": 0,
+"model": "svm",
+"path": "spirals_medium/clean/n10/seed0/svm.json"
+},
+{
+"dataset": "spirals_medium",
+"variant": "clean",
+"n": 200,
+"seed": 0,
+"model": "gbdt",
+"path": "spirals_medium/clean/n200/seed0/gbdt.json"
+},
+{
+"dataset": "spirals_medium",
+"variant": "clean",
+"n": 200,
+"seed": 0,
+"model": "gp",
+"path": "spirals_medium/clean/n200/seed0/gp.json"
+},
+{
+"dataset": "spirals_medium",
+"variant": "clean",
+"n": 200,
+"seed": 0,
+"model": "knn",
+"path": "spirals_medium/clean/n200/seed0/knn.json"
+},
+{
+"dataset": "spirals_medium",
+"variant": "clean",
+"n": 200,
+"seed": 0,
+"model": "logreg",
+"path": "spirals_medium/clean/n200/seed0/logreg.json"
+},
+{
+"dataset": "spirals_medium",
+"variant": "clean",
+"n": 200,
+"seed": 0,
+"model": "mlp",
+"path": "spirals_medium/clean/n200/seed0/mlp.json"
+},
+{
+"dataset": "spirals_medium",
+"variant": "clean",
+"n": 200,
+"seed": 0,
+"model": "rf",
+"path": "spirals_medium/clean/n200/seed0/rf.json"
+},
+{
+"dataset": "spirals_medium",
+"variant": "clean",
+"n": 200,
+"seed": 0,
+"model": "svm",
+"path": "spirals_medium/clean/n200/seed0/svm.json"
+},
+{
+"dataset": "spirals_medium",
+"variant": "clean",
+"n": 30,
+"seed": 0,
+"model": "gbdt",
+"path": "spirals_medium/clean/n30/seed0/gbdt.json"
+},
+{
+"dataset": "spirals_medium",
+"variant": "clean",
+"n": 30,
+"seed": 0,
+"model": "gp",
+"path": "spirals_medium/clean/n30/seed0/gp.json"
+},
+{
+"dataset": "spirals_medium",
+"variant": "clean",
+"n": 30,
+"seed": 0,
+"model": "knn",
+"path": "spirals_medium/clean/n30/seed0/knn.json"
+},
+{
+"dataset": "spirals_medium",
+"variant": "clean",
+"n": 30,
+"seed": 0,
+"model": "logreg",
+"path": "spirals_medium/clean/n30/seed0/logreg.json"
+},
+{
+"dataset": "spirals_medium",
+"variant": "clean",
+"n": 30,
+"seed": 0,
+"model": "mlp",
+"path": "spirals_medium/clean/n30/seed0/mlp.json"
+},
+{
+"dataset": "spirals_medium",
+"variant": "clean",
+"n": 30,
+"seed": 0,
+"model": "rf",
+"path": "spirals_medium/clean/n30/seed0/rf.json"
+},
+{
+"dataset": "spirals_medium",
+"variant": "clean",
+"n": 30,
+"seed": 0,
+"model": "svm",
+"path": "spirals_medium/clean/n30/seed0/svm.json"
+},
+{
+"dataset": "spirals_medium",
+"variant": "clean",
+"n": 60,
+"seed": 0,
+"model": "gbdt",
+"path": "spirals_medium/clean/n60/seed0/gbdt.json"
+},
+{
+"dataset": "spirals_medium",
+"variant": "clean",
+"n": 60,
+"seed": 0,
+"model": "gp",
+"path": "spirals_medium/clean/n60/seed0/gp.json"
+},
+{
+"dataset": "spirals_medium",
+"variant": "clean",
+"n": 60,
+"seed": 0,
+"model": "knn",
+"path": "spirals_medium/clean/n60/seed0/knn.json"
+},
+{
+"dataset": "spirals_medium",
+"variant": "clean",
+"n": 60,
+"seed": 0,
+"model": "logreg",
+"path": "spirals_medium/clean/n60/seed0/logreg.json"
+},
+{
+"dataset": "spirals_medium",
+"variant": "clean",
+"n": 60,
+"seed": 0,
+"model": "mlp",
+"path": "spirals_medium/clean/n60/seed0/mlp.json"
+},
+{
+"dataset": "spirals_medium",
+"variant": "clean",
+"n": 60,
+"seed": 0,
+"model": "rf",
+"path": "spirals_medium/clean/n60/seed0/rf.json"
+},
+{
+"dataset": "spirals_medium",
+"variant": "clean",
+"n": 60,
+"seed": 0,
+"model": "svm",
+"path": "spirals_medium/clean/n60/seed0/svm.json"
+}
+]
