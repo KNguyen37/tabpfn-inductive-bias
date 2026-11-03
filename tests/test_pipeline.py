@@ -1,4 +1,6 @@
 """The contract, synthetic data and sweep loop, with fast models only."""
+import json
+
 import numpy as np
 import pandas as pd
 import pytest
@@ -96,6 +98,27 @@ def test_sweep_resumes_and_aggregates(tmp_path):
     frame = pd.read_csv(table)
     assert tuple(frame.columns) == METRIC_COLUMNS
     assert frame.drop(columns="device").notna().all().all()
+
+
+def test_run_with_a_missing_grid_is_redone(tmp_path):
+    """A Drive disconnect can keep the record but lose the grid."""
+    keys = enumerate_keys(["moons"], ["clean"], [10], [0], ["logreg"])
+    run_sweep(keys, make_classic, tmp_path)
+    keys[0].grid_path(tmp_path).unlink()
+    assert run_sweep(keys, make_classic, tmp_path)["done"] == 1
+    assert keys[0].grid_path(tmp_path).exists()
+
+
+def test_resolved_model_settings_are_recorded(tmp_path):
+    def factory(name, seed):
+        model = make_classic(name, seed)
+        model.n_estimators_, model.model_path = 8, "v2.ckpt"
+        return model
+
+    key = RunKey("moons", "clean", 10, 0, "logreg")
+    run_sweep([key], factory, tmp_path)
+    extra = json.loads(key.run_path(tmp_path).read_text())["extra"]
+    assert (extra["n_estimators"], extra["model_path"]) == (8, "v2.ckpt")
 
 
 def test_failed_run_is_logged_and_does_not_stop_the_sweep(tmp_path):

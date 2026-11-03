@@ -55,4 +55,5 @@ A static page cannot run TabPFN, so the proposal's "add context points" becomes 
 ## Other decisions
 - **Compute:** TabPFN runs on Kiet's Colab GPU, recording the GPU type. Classic models and analysis run locally.
 - **Synthetic design:** 8 datasets, 4 variants, n in {10, 30, 60, 200}, 10 seeds. Checkerboard was added because H2 requires it. Reasons for nesting, shared grids and label noise are in `src/tabbias/synth.py`.
+- **TabPFN sweep timing:** the synthetic sweep may run before the Nov 10 freeze, on the condition that nobody reads its metrics or surfaces until the freeze is done. Only run counts, timing and failures may be checked. Grids are saved, so shape metrics can be recomputed after the threshold is final. A change to the synthetic design itself would require rerunning.
 - **Repo visibility:** public, so instructors can reach it without being added individually.
