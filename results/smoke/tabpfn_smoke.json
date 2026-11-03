@@ -1,0 +1,161 @@
+{
+ "gpu": "NVIDIA A100-SXM4-40GB",
+ "gpu_memory_gb": 42.4,
+ "tabpfn_version": "9.2.0",
+ "torch_version": "2.11.0+cu130",
+ "python": "3.13.16",
+ "runs": [
+  {
+   "model": "tabpfn_v2",
+   "n": 60,
+   "repeat": 0,
+   "cold": true,
+   "total_seconds": 5.24,
+   "fit_seconds": 0.34,
+   "predict_seconds": 2.72,
+   "accuracy": 0.965,
+   "jump_share": 0.584,
+   "axis_alignment": 0.78
+  },
+  {
+   "model": "tabpfn_v2",
+   "n": 60,
+   "repeat": 1,
+   "cold": false,
+   "total_seconds": 3.21,
+   "fit_seconds": 0.07,
+   "predict_seconds": 2.15,
+   "accuracy": 0.965,
+   "jump_share": 0.584,
+   "axis_alignment": 0.78
+  },
+  {
+   "model": "tabpfn_v2",
+   "n": 60,
+   "repeat": 2,
+   "cold": false,
+   "total_seconds": 3.24,
+   "fit_seconds": 0.07,
+   "predict_seconds": 2.16,
+   "accuracy": 0.965,
+   "jump_share": 0.584,
+   "axis_alignment": 0.78
+  },
+  {
+   "model": "tabpfn_v2",
+   "n": 200,
+   "repeat": 0,
+   "cold": true,
+   "total_seconds": 3.28,
+   "fit_seconds": 0.07,
+   "predict_seconds": 2.19,
+   "accuracy": 0.99,
+   "jump_share": 0.612,
+   "axis_alignment": 0.778
+  },
+  {
+   "model": "tabpfn_v2",
+   "n": 200,
+   "repeat": 1,
+   "cold": false,
+   "total_seconds": 3.27,
+   "fit_seconds": 0.07,
+   "predict_seconds": 2.19,
+   "accuracy": 0.99,
+   "jump_share": 0.612,
+   "axis_alignment": 0.778
+  },
+  {
+   "model": "tabpfn_v2",
+   "n": 200,
+   "repeat": 2,
+   "cold": false,
+   "total_seconds": 3.26,
+   "fit_seconds": 0.07,
+   "predict_seconds": 2.19,
+   "accuracy": 0.99,
+   "jump_share": 0.612,
+   "axis_alignment": 0.778
+  },
+  {
+   "model": "tabpfn_v35",
+   "n": 60,
+   "repeat": 0,
+   "cold": true,
+   "total_seconds": 12.34,
+   "fit_seconds": 7.52,
+   "predict_seconds": 3.61,
+   "accuracy": 0.99,
+   "jump_share": 0.537,
+   "axis_alignment": 0.783
+  },
+  {
+   "model": "tabpfn_v35",
+   "n": 60,
+   "repeat": 1,
+   "cold": false,
+   "total_seconds": 4.75,
+   "fit_seconds": 0.42,
+   "predict_seconds": 3.13,
+   "accuracy": 0.99,
+   "jump_share": 0.537,
+   "axis_alignment": 0.783
+  },
+  {
+   "model": "tabpfn_v35",
+   "n": 60,
+   "repeat": 2,
+   "cold": false,
+   "total_seconds": 4.73,
+   "fit_seconds": 0.41,
+   "predict_seconds": 3.12,
+   "accuracy": 0.99,
+   "jump_share": 0.537,
+   "axis_alignment": 0.783
+  },
+  {
+   "model": "tabpfn_v35",
+   "n": 200,
+   "repeat": 0,
+   "cold": true,
+   "total_seconds": 4.86,
+   "fit_seconds": 0.42,
+   "predict_seconds": 3.2,
+   "accuracy": 0.99,
+   "jump_share": 0.647,
+   "axis_alignment": 0.783
+  },
+  {
+   "model": "tabpfn_v35",
+   "n": 200,
+   "repeat": 1,
+   "cold": false,
+   "total_seconds": 4.86,
+   "fit_seconds": 0.44,
+   "predict_seconds": 3.19,
+   "accuracy": 0.99,
+   "jump_share": 0.647,
+   "axis_alignment": 0.783
+  },
+  {
+   "model": "tabpfn_v35",
+   "n": 200,
+   "repeat": 2,
+   "cold": false,
+   "total_seconds": 4.84,
+   "fit_seconds": 0.42,
+   "predict_seconds": 3.2,
+   "accuracy": 0.99,
+   "jump_share": 0.647,
+   "axis_alignment": 0.783
+  }
+ ],
+ "errors": {},
+ "jobs": {
+  "synthetic": 2560,
+  "real": 1080
+ },
+ "median_warm_seconds_per_job": 4.0,
+ "estimated_gpu_hours": 4.0,
+ "verdict": "GO"
+}
